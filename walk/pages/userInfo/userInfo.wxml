@@ -1,0 +1,51 @@
+<!--pages/userInfo.wxml-->
+
+<view class='userInfoTitle'>
+  <image src='{{users.portrait}}' class="icon" />
+  <text class="">{{users.nickname}}</text>
+</view>
+<view class="list">
+  <view class="users userInfo">
+    <image src='images/user.png' mode='aspectFit' class='wx-image' />
+    <navigator url='../userInfo/petOwnerInfo/petOwnerInfo' hover-class='navigator-hover'>
+      <text>账户信息</text>
+        <text class='fa fa-next'></text>
+    </navigator>
+  </view>
+  <!-- <view class="users petInfo">
+    <image src='images/record.png' mode='aspectFit' class='wx-image' />
+    <navigator url='../userInfo/petGrowthInfo/petGrowthInfo' hover-class='navigator-hover'>
+      <text>成长记录</text>
+       <text class='fa fa-next'></text>
+    </navigator>
+  </view>
+  <view class='users dietary-advice'>
+    <image src='images/advice.png' mode='aspectFit' class='wx-image' />
+    <navigator url='#' hover-class='navigator-hover'>
+      <text>饮食建议</text>
+       <text class='fa fa-next'></text>
+    </navigator>
+  </view> -->
+  <view class='users dietary-advice'>
+    <image src='images/question.png' mode='aspectFit' class='wx-image' />
+    <navigator url='question/question' hover-class='navigator-hover'>
+    <text>常见问题</text>
+          <text class='fa fa-next'></text>
+
+    </navigator>
+  </view>
+  <view class='users dietary-advice'>
+    <image src='images/aboutUs.png' mode='aspectFit' class='wx-image' />
+    <navigator url='companyInfo/companyInfo' hover-class='navigator-hover'>
+    <text>关于我们</text>
+      <text class='fa fa-next'></text>
+    </navigator>
+  </view>
+  <view class='users dietary-advice'>
+    <image src='images/callUs.png' mode='aspectFit' class='wx-image' />
+    <navigator url='addressInfo/addressInfo' hover-class='navigator-hover'>
+      <text>联系我们</text>
+     <text class='fa fa-next'></text>
+    </navigator>
+  </view>
+</view>

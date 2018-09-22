@@ -1,0 +1,19 @@
+ <view class="line_chart_container">
+ 	<view class="line_chart_title_container">
+    <view>
+    	<view class="line_chart_title_type">体重折线图</view>
+       <!--填入日均步数参数-->
+       <view class="line_chart_title_type">单位：Kg</view> 
+    </view>
+ 		<view>
+     <!--填入步数参数-->
+     	<!-- <view class="line_chart_title_unit">{{20}}Kg</view> -->
+       <!--填入时间参数-->
+      <!-- <view class="line_chart_title_unit">今天{{}}</view> -->
+     </view>
+ 	
+ 	</view>
+ 	<canvas canvas-id="{{canvasData.canvasId}}"
+    style="width:{{canvasData.canvasWidth}}px;height:{{canvasData.canvasHeight}}px;"
+      ></canvas>
+ </view>

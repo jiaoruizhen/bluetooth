@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "宠物成长记录",
+  "backgroundColor": "#F5F5F5",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "line-chart": "../components/line-chart/line-chart"
+  }
+}
+
+
+

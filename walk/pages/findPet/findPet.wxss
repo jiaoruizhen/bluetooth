@@ -1,0 +1,123 @@
+/* pages/findPet.wxss */
+
+.findPet {
+  box-sizing: border-box;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: space-around;
+  padding: 40rpx 20rpx;
+  background: rgba(93, 243, 243,.7);
+ 
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  position: relative;
+  top: -100rpx;
+}
+
+.nav {
+  /* margin-left: 70%;
+  font-size: 35rpx;
+  margin-top: 5%; */
+  display: inline-block;
+  width: 400rpx;
+  height: 80rpx;
+  background: #7fadf7;
+  color: #fff;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.nav::after {
+  border: none;
+}
+
+view {
+  font-size: 30rpx;
+}
+
+.user {
+  /* display: flex;
+  flex-direction: row; */
+  width: 90%;
+  margin: 0 auto;
+  height: 100rpx;
+  padding-bottom: 20rpx;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+  border-style: dashed;
+}
+
+.user image {
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.username {
+  line-height: 100rpx;
+  padding-left: 2%;
+}
+
+.loseInfo {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  box-sizing: border-box;
+}
+.loseInfo view {
+  margin:1% 0;
+  line-height: 60rpx;
+  text-align: justify;
+}
+
+.btnBox button {
+  line-height: 35px;
+  height: 35px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+}
+
+.title {
+  width: 100%;
+  position: relative;
+  color: #BF3EFF;
+  font-weight: 600;
+  font-size: 22pt;
+  text-align: center;
+}
+
+.title text {
+  position: absolute;
+  top: 90rpx;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+.findimg {
+  width: 100%;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.showImg {
+  width: 100%;
+}
+.itemBox{
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 0 10rpx; */
+  border-bottom: 10px solid #e5e5e5;
+  margin-bottom: 5%;
+}
+/* .image{
+  display: flex;
+  flex-direction: row; 
+} */

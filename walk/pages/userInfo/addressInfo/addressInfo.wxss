@@ -1,0 +1,17 @@
+/* pages/userInfo/addressInfo/addressInfo.wxss */
+
+.title{
+  font-size: 50rpx;
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+.content{
+  font-size:30rpx; 
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+}
+.text{
+  align-content: left;
+  margin-top: 2%;
+}

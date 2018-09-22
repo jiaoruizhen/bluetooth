@@ -1,0 +1,58 @@
+<!--pages/petOwnerInfo/petOwnerInfo.wxml-->
+<view class='petOwnerinfoBox'>
+  <view class="title">
+    <view class='text'>我的信息</view>
+  </view>
+  <view class="user portrait">
+    <view class='icontext'>头像</view>
+    <image src='{{users.portrait}}' class='icon' bindtap='chooseImageTap' data-id='0'>{{text}}</image>
+  </view>
+  <view class='nav' bindtap='edit' data-id='0' data-value="{{users.nickname}}">
+    <text class='nav-title'>昵称</text>
+    <view>{{users.nickname}}</view>
+    <view class='fa fa-next'></view>
+  </view>
+  <view class='nav' bindtap='edit' data-id='1'  data-value="{{users.name}}">
+    <text class='nav-title'>姓名</text>
+    <view>{{users.name}}</view>
+    <view class='fa fa-next'></view>
+  </view>
+  <view class='nav' bindtap='edit' data-id='2'  data-value="{{users.email}}">
+    <text class='nav-title'>邮箱</text>
+    <view>{{users.email}}</view>
+    <view class='fa fa-next'></view>
+  </view>
+  <view class="title">
+    <view class='petText'>我的宠物</view>
+    
+  </view>
+  <block wx:for="{{pets}}" wx:for-item="item" wx:for-index="index">
+    <view class="pet">
+      <view class="user portrait">
+        <view class='icontext'>头像</view>
+        <image src='{{item.portrait}}' class='icon' bindtap='chooseImageTap' data-id='1' data-petId='{{item.id}}' />
+        <!-- <button type="warn" bindtap='bindPet' id='{{index}}' data-id='{{item.id}}'>{{bind?"解绑":"绑定"}}</button> -->
+      </view>
+      <view class='nav' bindtap='edit' data-id='3' data-petId='{{item.id}}'  data-value="{{item.name}}">
+        <text class='nav-title'>姓名</text>
+        <view>{{item.name}}</view>
+        <view class='fa fa-next'></view>
+      </view>
+      <view class='nav' bindtap='edit' data-id='4' data-petId='{{item.id}}'  data-value="{{item.sex}}">
+        <text class='nav-title'>性别</text>
+        <view>{{item.sex==1?'男':'女'}}</view>
+        <view class='fa fa-next'></view>
+      </view>
+      <view class='nav' bindtap='edit' data-id='5' data-petId='{{item.id}}'  data-value="{{item.birthday}}">
+        <text class='nav-title'>出生日期</text>
+        <view>{{item.birthday}}</view>
+        <view class='fa fa-next'></view>
+      </view>
+      <view class='nav' bindtap='edit' data-id='6' data-petId='{{item.id}}'  data-value="{{item.typeName}}">
+        <text class='nav-title'>种类</text>
+        <view>{{item.typeName}}</view>
+        <view class='fa fa-next'></view>
+      </view>
+    </view>
+  </block>
+</view>

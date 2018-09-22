@@ -1,0 +1,3 @@
+<view class="column_chart_container">
+    <canvas canvas-id="{{canvasData.canvasId}}" style="width:{{canvasData.canvasWidth}}px;height:{{canvasData.canvasHeight}}px;"  bindtouchstart="onTouchHandler" bindtouchmove="onTouchMoveHandler" bindtouchend="onTouchEndHandler" ></canvas>
+</view>

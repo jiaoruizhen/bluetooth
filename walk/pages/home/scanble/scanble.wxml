@@ -1,0 +1,34 @@
+
+<!--pages/mine/mine.wxml-->
+<view class="container">
+    <view wx:if="{{devices==null||devices==''||devices==undefined}}">
+          <view>附近无设备可连接</view>
+    </view>
+    <view wx:else>
+    <block wx:for="{{devices}}" wx:for-item="device" wx:for-index="index">
+    <view class="section" hidden="{{!isbluetoothready}}">
+      <view class="list-item  {{connectIndex==index&&bind?'deviceconnected':''}}">
+        <text>设备名称:{{device.name}}</text>
+        <text>设备ID:{{device.localName}}</text>
+        <text>信号值:{{device.RSSI+100}}</text>
+        <button data-id="{{device.deviceId}}" data-name='{{device.name}}' data-mac='{{device.localName}}' id="{{index}}"  type="default" size="mini" bindtap="connectTO"> {{connectIndex==index&&bind?"已绑定":"绑定"}} </button>
+      </view>
+    </view>
+    </block>
+    </view>
+  <!-- </block> -->
+  <block wx:if="{{deviceconnected&&isbluetoothready}}">
+    <view class="recieve">
+      <text>数据接收</text>
+      <textarea disabled="true" value="{{receivedata}}" />
+    </view>
+    <view class="send">
+      <form bindsubmit="formSubmit" bindreset="formReset">
+        <text>发送数据:</text>
+        <input name="senddata"/>
+        <button size="mini" formType="submit">发送 </button>
+        <button size="mini" formType="reset">清空</button>
+      </form>
+    </view>
+  </block>
+</view>

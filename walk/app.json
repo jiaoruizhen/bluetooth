@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/findPet/findPet",
+    "pages/index/index",
+    "pages/userInfo/petOwnerInfo/editUserInfo/edit",
+    "pages/userInfo/userInfo",
+    "pages/bluetooth/bluetooth",
+    "pages/home/scanble/scanble",
+    "pages/home/home",
+   
+    "pages/userInfo/petGrowthInfo/add/add",
+    "pages/userInfo/addressInfo/addressInfo",
+    "pages/userInfo/companyInfo/companyInfo",
+    "pages/userInfo/question/question",
+    "pages/userInfo/petGrowthInfo/petGrowthInfo",
+    "pages/findPet/addFind/addFind",
+    "pages/bluetooth/add/add",
+    "pages/userInfo/petOwnerInfo/petOwnerInfo",
+    "pages/userInfo/petOwnerInfo/addPet/addPet",
+
+    
+    
+    "pages/findPet/myPublish/myPublish",
+    "pages/home/connection/connection",
+    "pages/findPet/information/information"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#35495e",
+    "borderStyle": "white",
+    "backgroundColor": "#f9f9f9",
+    "list": [
+      {
+        "selectedIconPath": "images/home.png",
+        "iconPath": "images/home1.png",
+        "pagePath": "pages/home/home",
+        "text": "主页"
+      },
+      {
+        "selectedIconPath": "images/findPet.png",
+        "iconPath": "images/findPet1.png",
+        "pagePath": "pages/findPet/findPet",
+        "text": "宠物协寻"
+      },
+      {
+        "selectedIconPath": "images/growth.png",
+        "iconPath": "images/growth1.png",
+        "pagePath": "pages/bluetooth/bluetooth",
+        "text": "成长记录"
+      },
+      {
+        "selectedIconPath": "images/users.png",
+        "iconPath": "images/users1.png",
+        "pagePath": "pages/userInfo/userInfo",
+        "text": "我的账户"
+      }
+    ]
+  }
+}

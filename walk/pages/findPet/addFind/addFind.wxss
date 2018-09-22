@@ -1,0 +1,115 @@
+/* pages/findPet/addFind/addFind.wxss */
+
+.text,.picture,.pet{
+  border-top: 1rpx solid;
+  border-bottom: 1rpx double;
+  border-color: gainsboro;
+  padding-left: 5%;
+}
+.code{
+   border-bottom: 1rpx double;
+  border-color: gainsboro; 
+  padding-left: 5%;
+}
+.mobile{
+  border-top: 1rpx solid;
+  border-color: gainsboro;
+  padding-left: 5%;
+}
+textarea{
+  width: 95%;
+  height: 180rpx;
+  max-height: 180rpx;
+  padding-top: 3%;
+  font-size: 30rpx;
+}
+.picture{
+ margin-top: 5%;
+ padding-bottom: -20%;
+}
+.picture-text,.pet{
+  margin-top: 5%;
+}
+.picture-area{
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+}
+image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.picture-text{
+font-size: 30rpx;
+}
+.upload{
+  width:140rpx;
+  height:100rpx;
+  border: 1rpx gainsboro solid;
+  text-align: center;
+  padding-top: 5%;
+  color: gainsboro;
+  margin-top: 5%;
+}
+.mobile,.code,.pet{
+    margin-top: 5%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    font-size: 30rpx;
+    padding-bottom: 5%;
+}
+.device{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    font-size: 30rpx;
+}
+.code{
+    margin-top:-5%;
+}
+input{
+  border: 1rpx gainsboro solid;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  border-radius: 8rpx;
+}
+button{
+height: 32px;
+box-sizing: border-box;
+text-align: center;
+min-width: 60rpx;
+font-size: 32rpx;
+line-height: 60rpx;
+}
+.release{
+  width: 95%;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+.codeTime{
+  font-size: 20rpx;
+  color:gray;
+}
+.hide{  display: none; } 
+.show{  display: block; } 
+.picker{
+  padding-right: 10rpx;
+}
+.section,.device{
+   padding-top: 5%;
+  display: flex;
+  flex-direction: row;
+  font-size: 30rpx;
+   border-top: 1rpx double;
+  border-color: gainsboro;
+  padding-left: 5%;
+}
+.address{
+  padding-left: 5%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    font-size: 30rpx;
+    padding-bottom: 5%;
+}

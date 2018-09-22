@@ -1,0 +1,134 @@
+/* pages/userInfo/petOwnerInfo/addPet/addPet.wxss */
+.pet{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+  padding-left: 5%;
+}
+page{
+  font-size: 36rpx;
+  color: #000000;
+  font-family: PingFangSC-Regular;
+}
+input{
+  border: 1rpx solid gainsboro;
+}
+.submit{
+  width: 90%;/**/
+  margin: 0 auto;/**/
+  margin-top: 10%;
+}
+.picture{
+  margin-top: 10%;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: row;
+}
+.picture-area{
+  display: flex;
+  flex-direction: row;
+  /* padding-left: 5%; */
+}
+/* .upload{
+  width: 5%;
+  height:5%;
+  border: 1rpx solid gainsboro; 
+} */
+image{
+  width:80rpx;
+  height:80rpx;
+}
+
+/* sharon */
+.pet{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10%;
+  position: relative；
+}
+.sex view,.name view{
+  width: 180rpx;
+  line-height: 64rpx;
+  margin-right: 10rpx;
+  color: #666;
+}
+.sex view text,.name view text,.pet_select text,.picture-text text{
+  display: block;
+  line-height: 64rpx;
+  color: #666;
+  width: 150rpx;
+  margin-right: 10rpx;
+  text-align:justify;
+  text-justify:distribute-all-lines;
+  text-align-last:justify;
+  float: left;
+}
+.pet input{
+  box-sizing: border-box;
+  padding: 0 15rpx;
+  line-height: 100%;
+  font-size: 32rpx;
+  height: 64rpx;
+  border-radius: 10rpx;
+}
+label{
+  margin-right: 40rpx;
+}
+.picker{
+  position: relative;
+  height: 80rpx;
+}
+.pet_select{
+  width: 180rpx;
+  position: absolute;
+  left: 0;
+  line-height: 64rpx;
+  color: #666;
+}
+.pet_name{
+  margin-left: 190rpx;
+  line-height: 64rpx;
+  /* border-bottom: 1px solid #179B16;
+  color: #179B16; */
+}
+.picture {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10%;
+  position: relative;
+}
+.picture-text{
+  color: #666;
+  line-height: 80rpx;
+  position: absolute;
+  width: 180rpx;
+}
+.picture-text text{
+  line-height: 80rpx;
+}
+.picture-area{
+  box-sizing: border-box;
+  margin-left: 190rpx;
+}
+.upload{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 15rpx;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  text-align: center;
+  line-height: 80rpx;
+  color: #1AAD19;
+}
+radio .wx-radio-input{
+  width: 50rpx;
+  height: 50rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+.submit button{
+  letter-spacing: 15rpx;
+  line-height: 80rpx;
+}
+/* sharon */

@@ -1,0 +1,28 @@
+<!--pages/userInfo/petGrowthInfo/add/add.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='growth'> 
+   <view>宠物：</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{pets}}" wx:for-item="item" >
+          <radio value="{{item.id}}" >{{item.name}}</radio>
+      </label>
+    </radio-group>
+  </view>
+  <view class='growth'>
+    <view>身高(CM)：</view>
+    <input type='number' name="height" />
+  </view>
+  <view class='growth'>
+    <view>体重(Kg)：</view>
+    <input type='number' name="weight" />
+  </view>
+  <view class='growth'>
+    <view>饮食情况：</view>
+    <input type='text' placeholder='{{diet}}' name="diet" />
+  </view>
+  <view class='growth'>
+    <view>疫苗接种情况：</view>
+    <input type='nutextmber' placeholder='{{vacDetail}}' name="vacDetail" />
+  </view>
+  <button type='primary' form-type='submit'>提交</button>
+</form>

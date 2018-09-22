@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "多尼斯宠物计步跟随器",
+  "backgroundColor": "#F5F5F5",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "column-chart": "../components/column-chart/column-chart"
+  }
+  
+}

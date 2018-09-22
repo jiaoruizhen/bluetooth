@@ -1,0 +1,62 @@
+<!--pages/userInfo/petOwnerInfo/editUserInfo/edit.wxml-->
+<form bindsubmit="editUserInfo">
+  <view class='title'>修改{{text}}</view>
+
+   <!-- <view class='edit'>
+    <view class='btn'>
+      <button type='primary' form-type='submit' data-id='{{id}}'>确认修改</button>
+    </view>
+  </view>   -->
+
+  <view wx:if="{{text=='宠物性别'}}">
+    <view class='pet sex'>
+      <view>性别：</view>
+      <radio-group name="sex">
+        <block wx:if="{{value==1}}">
+          <label>
+          <radio value="1" checked/>男</label>
+        <label>
+          <radio value="2" />女</label>
+        </block>
+        <block wx:elif="{{value==2}}">
+         <label>
+          <radio value="1" />男</label>
+        <label>
+          <radio value="2" checked/>女</label>
+        </block>
+        <block wx:else>
+          <label>
+          <radio value="1" />男</label>
+        <label>
+          <radio value="2" />女</label>
+        </block>
+      </radio-group>
+    </view>
+  </view>
+  <view wx:elif="{{text=='宠物出生日期'}}">
+    <picker mode="date" value="{{date}}" start="1978-01-01" end="2100-1-1" bindchange="bindDateChange">
+      <view class="picker">
+        请选择：{{dates}}
+      </view>
+    </picker>
+  </view>
+  <view wx:elif="{{text=='宠物种类'}}">
+    <picker name="selector" bindchange="bindPickerChange" data-type="{{picker_arr[picker_index]}}" value="{{picker_index}}" range="{{picker_arr}}">
+      <view class="picker">
+        请选择：{{selectType}}
+      </view>
+    </picker>
+  </view>
+  <view class='user' wx:else>
+    <view class='text1'>{{text}}:</view>
+    <input type='text' class='text' bindblur='check' placeholder='{{value}}' name="input" />
+  </view>
+
+   <view class='edit'>
+    <view class='btn'>
+      <button type='primary' form-type='submit' data-id='{{id}}'>保存</button>
+      <button type='primary' form-type='reset' data-id='{{id}}'>重置</button>
+    </view>
+  </view>  
+
+</form>

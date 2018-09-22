@@ -1,0 +1,28 @@
+<view class="container">
+  <view class='add'>
+    <button type='primary' bindtap='addRecord'>添加记录</button>
+  </view>
+  <view class="table">
+    <view class="tr">
+      <view class="th">姓名</view>
+      <view class="th">体重（kg）</view>
+      <view class="th">身高（cm）</view>
+      <view class="th">饮食</view>
+      <view class="th">疫苗</view>
+      <view class="th">日期</view>
+      <view class="th">操作</view>
+    </view>
+    <view wx:for="{{pets}}" wx:for-index='index'>
+      <view class="tr" wx:for="{{pets[index].growthRecord}}" wx:for-index="item">
+          <view class='td'>{{pets[index].petName}}</view>
+          <view class="td">{{pets[index].growthRecord[item].weight}}</view>
+          <view class="td">{{pets[index].growthRecord[item].height}}</view>
+          <view class="td">{{pets[index].growthRecord[item].diet}}</view>
+          <view class="td">{{pets[index].growthRecord[item].vacDetail}}</view>
+          <view class="td">{{pets[index].growthRecord[item].rDate}}</view>
+          <view class='td delete' bindtap='delete' data-id='{{pets[index].growthRecord[item].id}}'><image src='../../images/delete.png' /><text>删除</text></view>
+      </view>
+    </view>
+  </view>
+  <view><line-chart id="line-chart" canvasData="{{lineCanvasData}}" /></view>
+</view>

@@ -1,0 +1,117 @@
+<view class='container-box'>
+  <radio-group class='cn userinfo' bindchange='selectDevice' >
+    <label class='cn userinfo' wx:for="{{petInfo}}" wx:for-item="item">
+      <label wx:if="{{mac==item.mac}}">
+        <radio value="{{item.mac}}" bindtap='selectMac' data-mac='{{item.mac}}' checked>
+          <image src='{{item.url}}' />
+          <text>{{item.name}}</text>
+        </radio>
+      </label>
+      <label wx:else>
+        <radio value="{{item.uuid}}" bindtap='selectMac' data-mac='{{item.mac}}'>
+          <image src='{{item.url}}' />
+          <text>{{item.name}}</text>
+        </radio>
+      </label>
+    </label>
+  </radio-group>
+  <view class='cn navigate'>
+    <text class='list-l'>最后同步时间：</text>
+    <text class='list'>{{date}}</text>
+  </view>
+  <view class='battery'>
+    <text>计步器电量：</text>
+    <progress percent="{{battery}}" show-info="true" active="true" stroke-width="12" activeColor="green" />
+  </view>
+  <view class='cn device'>
+    <text>蓝牙：</text>
+    <text> {{connected?"已连接":"未连接"}}</text>
+  </view>
+  <view class='cn led'>
+    <text class=''>灯：</text>
+    <view class='image'>
+      <button bindtap='openLed' style='background-color:{{white}};color:{{cwhite}}' data-id='0'>关</button>
+      <button bindtap='openLed' style='background-color:{{red}};color:{{cred}}' data-id='1'>红</button>
+      <button bindtap='openLed' style='background-color:{{green}};color:{{cgreen}}' data-id='2'>绿</button>
+      <button bindtap='openLed' style='background-color:{{bind}};color:{{cbind}}' data-id='3'>闪</button>
+    </view>
+
+  </view>
+  <view class="cn sens">
+    <text>灵敏度：</text>
+    <view class="section section_gap">
+      <view class="body-view">
+        <slider class='slider' bindchange="slider3change" min="15" max="30" show-value activeColor="#3ea6ff" value="{{sense}}" style='width:400rpx' />
+      </view>
+    </view>
+  </view>
+  <view class="signBox">
+    <view class="wrap">
+      <view class="top">
+        <canvas class="cir" canvas-id="canvasArc"></canvas>
+        <view class='dc'>
+          <view class="dd">目标步数 {{data}}</view>
+          <view class="cc">今日步数 {{runData[0].sCount}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='cn rundata'>
+      <view class='run'>
+        <image src='images/shoe_run@3x.png'></image>
+        <text>{{runData[0].sMileage}} m</text>
+      </view>
+      <view class='cal'>
+        <image src='images/energy@3x.png'></image>
+        <text>{{runData[0].sCalories}} Cal</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='title'>
+    <text>7日历史</text>
+  </view>
+  <view class="histogram">
+    <column-chart id="column-chart" canvasData="{{columnCanvasData}}" />
+  </view>
+  <view class='infor_box'>
+    <view class='total'>
+      <text>总计</text>
+    </view>
+    <view class='cn total-list'>
+      <view class='list'>
+        <text class='count'>步数（步）</text>
+        <view>{{totalData.counts}}</view>
+      </view>
+      <view class='list'>
+        <text class='count'>距离（m）</text>
+        <view>{{totalData.mileages}}</view>
+      </view>
+      <view class='list'>
+        <text class='count'>卡路里（Cal）</text>
+        <view>{{totalData.calories}}</view>
+      </view>
+    </view>
+
+    <view class='avg'>
+      <text>每日平均</text>
+    </view>
+    <view class='cn total-list'>
+      <view class='list'>
+        <text class='count'>步数（步）</text>
+        <view>{{totalData.count}}</view>
+      </view>
+      <view class='list'>
+        <text class='count'>距离（m）</text>
+        <view>{{totalData.mileage}}</view>
+      </view>
+      <view class='list'>
+        <text class='count'>卡路里（Cal）</text>
+        <view>{{totalData.calorie}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='foot'>
+    <text>当前设备：{{mac}}</text>
+    <text>当前版本是:{{revision}}</text>
+  </view>
+</view>

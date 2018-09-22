@@ -1,0 +1,56 @@
+<!--pages/findPet.wxml-->
+<view class='findPet'>
+  <view class='title'>
+    <image src='../../images/finded.png' class='findimg'></image>
+    <text>协寻启示</text>
+  </view>
+  <view class='outbox'>
+    <view class='btnBox'>
+      <button type='button' bindtap='detail' class="nav">我的发布</button>
+      <button type='button' bindtap='publish' class="nav">我要发布</button>
+    </view>
+  </view>
+  <block wx:for="{{loseInfoView}}" wx:for-item="item" wx:for-index="index">
+    <view class='itemBox'>
+      <!--用户头像和昵称区-->
+      <view class="user">
+        <image src='{{item.portrait}}'></image>
+        <view class='username'>{{item.nickname}}</view>
+      </view>
+      <!--图片，发布信息区-->
+      <view class="loseInfo">
+        <view wx:if="{{item.typeName!=null}}">宠物类型： {{item.typeName}}</view>
+        <view wx:if="{{item.petName!=null}}">宠物名字： {{item.petName}}</view>
+        <view>宠物描述： {{item.loseInfo.sendData}}</view>
+        <view>宠物性别： {{item.sex==1?'男':'女'}}</view>
+        <view>丢失时间： {{item.loseInfo.createTime}}</view>
+        <view>丢失地点： {{item.loseInfo.location}}</view>
+        <view wx:if="{{item.loseInfo.bounty!=null}}">悬赏金额： {{item.loseInfo.bounty}}元</view>
+        <view wx:if="{{item.mac!=null&&item.mac!=''&&item.mac!=undefined}}">
+          <view>丢失设备： {{item.mac}}</view>
+        </view>
+        <block wx:if="{{item.loseInfo.status==0}}">
+          <view>悬赏状态： <text style='background:#999;color:white;padding:0 10rpx;border-radius: 8rpx;'>悬赏中</text></view>
+        </block>
+        <block wx:if="{{item.loseInfo.status==1}}">
+          <view>悬赏状态：<text style='background:green;color:white;padding:0 10rpx;border-radius: 8rpx;'>悬赏成功</text></view>
+        </block>
+        <view wx:if="{{item.username!=null}}">宠物主人： {{item.username}}</view>
+        <view>联系电话： {{item.loseInfo.mobile}}</view>
+        
+        <!-- <view wx:for='{{item.list}}' class="image" wx:for-item="image" wx:for-index="key" id='{{index}}'>
+          <view>
+            <image src='{{image.url}}' class='showImg' style="width:{{imgwidth}}rpx; height:{{imgheight }}rpx;" mode="widthFix" bindload='imageLoad'  bindtap='preview' id="{{key}}" data-url='{{image.url}}'/>
+          </view>
+        </view> -->
+
+        <view class="image" wx:if="{{item.list!=null}}">
+        <image src='{{image.url}}' wx:for='{{item.list}}' wx:for-item="image" wx:if="{{item.list.length==1}}" class='showImg' style="width:80%;height:{{imgheight}}rpx;" mode="widthFix" bindload='imageLoad' bindtap='preview' data-url='{{image.url}}' data-id='{{item.loseInfo.id}}' />
+        <image src='{{image.url}}' wx:for='{{item.list}}' wx:for-item="image" wx:if="{{item.list.length==2}}" class='showImg' style="width:48%;margin: 0 1%;height:300rpx;" mode="" bindload='imageLoad' bindtap='preview' data-url='{{image.url}}' data-id='{{item.loseInfo.id}}' />
+        <image src='{{image.url}}' wx:for='{{item.list}}' wx:for-item="image" wx:if="{{item.list.length==3}}" class='showImg' style="width:31.333%;margin: 0 1%;height: 200rpx;" mode="" bindload='imageLoad' bindtap='preview' data-url='{{image.url}}' data-id='{{item.loseInfo.id}}' />
+        </view>
+
+      </view>
+    </view>
+  </block>
+</view>

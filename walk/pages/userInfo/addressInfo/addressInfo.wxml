@@ -1,0 +1,13 @@
+<!--pages/userInfo/addressInfo/addressInfo.wxml-->
+
+
+<view class='title'>联系我们</view>
+<view class="content">
+  <view class='text'>公司：广东多尼斯网络科技有限公司</view>
+  <view class='text'>地址：广东省东莞市南城区天安数码城B2栋1202室</view>
+  <view class='text'>邮编：523070</view>
+  <view class='text'>电话：+86-769-22001983</view>
+  <view class='text'>传真：+86-769-22001956</view>
+  <view class='text'>邮箱：service@dognesstech.com</view>
+</view>
+

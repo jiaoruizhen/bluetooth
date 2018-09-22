@@ -1,0 +1,264 @@
+/* pages/home/home.wxss */
+
+.container-box {
+  width: 100%;
+  box-sizing: border-box;
+  background: #eee;
+}
+
+image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.image {
+  display: flex;
+  flex-direction: row;
+}
+
+.cn, .image{
+  display: flex;
+  flex-direction: row;
+}
+
+.navigate, .device, .led, .warn, .rundata, .userinfo {
+  height: 100rpx;
+  line-height: 80rpx;
+  /* margin-bottom: 5%; */
+  padding: 10rpx;
+  border-bottom: 1rpx solid #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 10rpx;
+}
+
+.sens{
+  width: 100%;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 10rpx;
+}
+.sens text{
+  line-height: 80rpx
+}
+.battery{
+   background: #fff;
+   border-bottom: 1rpx solid #eaeaea;
+    box-sizing: border-box;
+    margin-bottom: 10rpx;
+    padding: 10rpx;
+}
+.signBox {
+  background: #fff;
+  margin-bottom: 10rpx;
+  padding-bottom: 20rpx;
+}
+
+.nickname {
+  margin-left: 35%;
+}
+
+text {
+  font-size: 36rpx;
+  color: #000;
+  font-family: PingFangSC-Regular;
+}
+
+.switch {
+  line-height: 34rpx;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+}
+
+.wx-switch-input {
+  width: 82rpx !important;
+  height: 40rpx !important;
+}
+
+/*白色样式（false的样式）*/
+
+.wx-switch-input::before {
+  width: 80rpx !important;
+  height: 36rpx !important;
+}
+
+/*绿色样式（true的样式）*/
+
+.wx-switch-input::after {
+  width: 40rpx !important;
+  height: 36rpx !important;
+}
+
+.cn-warn {
+  margin-right: 70%;
+}
+
+.navigate {
+  display: flex;
+}
+
+.navigate {
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.warn {
+  border-bottom: 20px solid;
+  border-bottom-color: gainsboro;
+}
+
+.cir {
+  /* display: inline-block;*/
+  padding-top: 30rpx;
+  width: 220px;
+  height: 200px;
+}
+
+.top {
+  position: relative;
+  /* margin-right: 30%;
+  width: 220px;
+  height: 220px;
+  margin-top: 30%; */
+}
+
+.dc {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.dd {
+  /* font-size: 36rpx;
+  padding-left: 16rpx;
+  letter-spacing: 2rpx;
+  margin-top: -85%;
+  margin-left: 15%; */
+}
+
+.cc {
+  /* margin-left: 20%; */
+  font-size: 36rpx;
+}
+
+/* 
+.run,.cal,.list{
+  display: flex;
+  flex-direction: column;
+} */
+
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.run, .cal {
+  width: 50%;
+  text-align: center;
+}
+
+.run image, .cal image {
+  display: block;
+  margin: 0 auto;
+}
+
+.rundata {
+  height: 80px;
+  border: 0;
+}
+
+.title{
+  text-align: center;
+  background: #fff;
+}
+
+.histogram {
+  margin-bottom: 5rpx;
+  background: #fff;
+}
+
+
+.count{
+  padding-right: 5%;
+  color: darkgray;
+}
+
+.infor_box {
+  background: #fff;
+  padding: 20rpx 10rpx;
+  box-sizing: border-box;
+}
+
+.total, .avg {
+  font-size: 36rpx;
+  margin-bottom: 10rpx;
+  background: #3ea6ff;
+  color: #fff;
+  line-height: 80rpx;
+  /* text-align: center; */
+  padding-left: 20rpx;
+}
+.avg{
+  margin-top: 20rpx;
+}
+.total text, .avg text{
+  font-size: 40rpx;
+  color: #fff;
+}
+.list view, .list view{
+  line-height: 80rpx;
+  font-size: 40rpx;
+}
+.list text, .list text{
+  line-height: 80rpx;
+}
+
+button {
+  height: 64rpx;
+  box-sizing: border-box;
+  text-align: center;
+  min-width: 100rpx;
+  font-size: 32rpx;
+  line-height: 64rpx;
+  margin-right: 10rpx;
+  margin-top: 8rpx;
+}
+
+
+.total-list {
+  display: flex;
+  flex-flow: row;
+}
+
+.total-list .list {
+  /* justify-content: space-between */
+  flex-grow: 1;
+  text-align: center;
+}
+.foot{
+  margin-top: 20rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  /* text-align:center; */
+  padding: 20rpx;
+}
+.foot text{
+  font-size: 30rpx;
+  color: darkgray;
+}

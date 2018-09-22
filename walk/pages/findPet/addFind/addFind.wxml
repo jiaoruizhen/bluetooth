@@ -1,0 +1,71 @@
+<!--pages/findPet/addFind/addFind.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='text'>
+    <textarea name="sendData" auto-focus='true' bindblur='sendMsg' maxlength="140" placeholder="请输入文本 最多可输入70个字符" />
+  </view>
+  <view class='device'>
+    <view>丢失的设备：</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{device}}" wx:for-item="item">
+          <label wx:if="{{item.type==2}}">
+            <radio value="{{item.id}}">{{item.name}}的蓝牙</radio>
+          </label>
+        </label>
+    </radio-group>
+  </view>
+  <view class='pet'>
+    <picker name="selector" bindchange="bindPickerChange" value="{{picker_index}}" range="{{picker_arr}}">
+      <view class="picker">
+        请选择：{{picker_arr[picker_index]}}
+      </view>
+    </picker>
+  </view>
+  <view class='picture'>
+    <view class='picture-text'>图片上传
+      <text>{{index}}/3</text>
+    </view>
+    <view class="picture-area">
+      <view class='upload' hidden='{{index==3?true:false}}' bindtap='chooseImageTap'>十</view>
+      <block wx:for="{{picture}}" wx:for-index="index">
+        <image src='{{picture[index]}}' bindtap='preview' data-url='{{picture[index]}}'/>
+        <view class="delete-btn" data-index="{{index}}" data-url='{{picture[index]}}' catchtap="deletePicture">x</view>
+      </block>
+    </view>
+  </view>
+
+  <view class='mobile'>
+    <view>手机号：</view>
+    <input type="number" name="mobile" placeholder="请输入手机号" minlength="11" maxlength="11" bindblur="blur_mobile" />
+    <button type="button" class="{{is_show?'show':'hide'}}" bindtap="clickVerify">获取验证码</button>
+    <button type="button" style='background-color:gray' class="{{is_show?'hide':'show'}}">重新发送{{last_time}}秒</button>
+  </view>
+
+  <view class='code'>
+    <view>验证码：</view>
+    <input type='number' placeholder="请输入验证码" minlength="6" maxlength="6" bindchange="send_code" />
+  </view>
+  <!--丢失时间：-->
+  <view class="section">
+    <picker mode="date" value="{{date}}" start="1978-01-01" end="{{end}}" bindchange="bindDateChange">
+      <view class="picker">
+        丢失日期: {{dates}}
+      </view>
+    </picker>
+    <picker mode="time" value="{{time}}" start="00:00:00" end="23:59:59" bindchange="bindTimeChange">
+      <view class="picker">
+        {{times}}
+      </view>
+    </picker>
+  </view>
+  <!--丢失地址-->
+  <view class='address'>
+    <view>丢失地址：</view>
+    <input type='text' placeholder="请输入丢失地址" bindblur='blur_location' name="location" />
+  </view>
+  <view class='code'>
+    <view>悬赏金额：</view>
+    <input type='text' placeholder="请输入悬赏金额" bindblur='blur_bounty' name="bounty" />
+  </view>
+
+  <button class='release' type='primary' form-type='submit'>发布</button>
+</form>

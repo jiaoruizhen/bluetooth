@@ -1,0 +1,11 @@
+ <!-- <view class="inputView"> 
+  <label class="loginLab">名称:</label> 
+  <input class="inputText" placeholder="请输入围栏名称" bindinput="nameInput" /> 
+ </view>  -->
+<map  id="map"  longitude="{{lng}}" latitude="{{lat}}" scale="19" circles='{{circles}}' markers='{{markers}}' controls='{{controls}}' style="width: 100%; height: {{height}}px;" bindcontroltap='controltap'>
+</map>
+<view class="section section_gap">
+  <view class="body-view">
+    <slider bindchange="sliderchange" min="50" max="500" show-value="true" step='1' block-size='12'/>
+  </view>
+</view>

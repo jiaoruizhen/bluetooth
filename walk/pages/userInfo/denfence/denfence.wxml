@@ -1,0 +1,7 @@
+<!--pages/denfence/denfence.wxml-->
+<view>
+<view class='title'>
+<text class='title'>围栏</text>
+</view>
+<button type="default"  bindtap="addDefence"> 添加围栏 </button>
+</view>

@@ -1,0 +1,21 @@
+/* pages/denfence/denfence.wxss */
+.title
+{
+      padding:0px;
+      background-color:#E7EAEB;
+      font-family:"微软雅黑","黑体","宋体";
+      font-size:12px;
+      height:36px;
+      text-align:center;
+      line-height:36px;
+            
+}
+/** wxss **/
+/** 修改button默认的点击态样式类**/
+.button-hover {
+  background-color: red;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover {
+  background-color: blue;
+}

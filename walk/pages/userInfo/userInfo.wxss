@@ -1,0 +1,85 @@
+/* pages/userInfo.wxss */
+
+.navigator-hover {
+  color: black;
+}
+
+.userInfoTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80rpx;
+  padding-top: 50rpx;
+}
+
+.userInfo {
+  margin-bottom: 20rpx;
+
+  
+}
+
+.wx-image {
+  width: 40px;
+  height: 20px;
+}
+
+.petInfo {
+ 
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.dietary-advice {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+
+}
+
+.users {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+   border-bottom: 1rpx solid #ddd;
+}
+
+.users navigator {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.users navigator text{
+  vertical-align: middle
+}
+/*引入font awesome图标文件*/
+@import "../../font.wxss";
+.icon {
+  width: 100rpx;
+  height: 100rpx;
+  border: 0 solid #f00;
+  border-radius: 100rpx;
+  background-color: #f10b2e;
+}
+
+.r-bind {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.exit {
+}
+
+.list {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20rpx;
+}
+
+.btn-exit, .btn-bind {
+  text-align: center;
+}
+
+.list .wx-image-right {
+  width: 20px;
+  height: 20px;
+}

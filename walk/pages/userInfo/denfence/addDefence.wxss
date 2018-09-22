@@ -1,0 +1,19 @@
+/* pages/denfence/addDefence.wxss */
+.inputView { 
+ background-color: #fff; 
+ line-height: 44px; 
+} 
+.loginLab {
+ flex: block; 
+ float: left;  
+ color: #545454; 
+ font-size: 16px
+} 
+.inputText { 
+ flex: block; 
+ float: left; 
+ text-align: left; 
+ margin-top: 9px; 
+ color: #cccccc; 
+ font-size: 16px
+} 

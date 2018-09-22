@@ -1,0 +1,108 @@
+/* pages/findPet/information/information.wxss */
+/* pages/findPet.wxss */
+
+.findPet {
+  box-sizing: border-box;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: space-around;
+  padding: 40rpx 20rpx;
+  background: rgba(93, 243, 243,.7);
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  position: relative;
+  top: -100rpx;
+}
+
+.nav {
+  /* margin-left: 70%;
+  font-size: 35rpx;
+  margin-top: 5%; */
+  display: inline-block;
+  width: 400rpx;
+  height: 80rpx;
+  background: #7fadf7;
+  color: #fff;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.nav::after {
+  border: none;
+}
+
+view {
+  font-size: 30rpx;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+}
+
+.user image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.username {
+  padding-top: 5%;
+  padding-left: 2%;
+}
+
+.loseInfo {
+  padding-left: 10%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  box-sizing: border-box;
+}
+
+.loseInfo view {
+  padding-top: 2%;
+}
+
+.btnBox button {
+  line-height: 35px;
+  height: 35px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+}
+
+.title {
+  width: 100%;
+  position: relative;
+  color: #BF3EFF;
+  font-weight: 600;
+  font-size: 22pt;
+  text-align: center;
+}
+
+.title text {
+  position: absolute;
+  top: 90rpx;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+.findimg {
+  width: 100%;
+padding:20rpx;
+box-sizing: border-box;
+}
+.showImg {
+  width: 100%;
+
+}
+.itembox{
+  padding: 0 10rpx;
+}
+.image{
+  display: flex;
+  flex-direction: row;
+}

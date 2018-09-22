@@ -1,0 +1,29 @@
+<!--pages/userInfo/question/question.wxml-->
+<view class='title'>
+    常见问题
+</view>
+<view class="content">
+    <view>1、设备连接不上怎么办？</view>
+    <view>（1）设备连接不上时，请检查手机蓝牙是否已开启；</view>
+    <view>（2）请确认您要连接的蓝牙设备是否在您身边（蓝牙连接距离大约10米）；</view>
+    <view>（3）可能是网络原因导致连接失败，请尝试重新连接；</view>
+</view>
+<view class="content">
+    <view>2、登录上之后里面的数据都是空的？</view>
+    <view>（1）请确认您是否有我司设备；</view>
+    <view>（2）请确认您的设备已经与您的手机绑定；</view>
+    <view>（3）可能是网络原因导致连接失败，请尝试重新连接；</view>
+</view>
+<view class="content">
+    <view>3、登录成功之后没有显示连接设备？</view>
+    <view>可能是网络原因导致页面更新失败，请尝试重新登陆；</view>
+</view>
+<view class="content">
+    <view>4、设备连接失败？</view>
+    <view>（1）可能是网络原因导致页面更新失败，请尝试重新连接；</view>
+    <view>（2）如果公众号中设备在连接时，请断开与公众号的连接，重新进入小程序即可；（因为同一设备不能同时被两个端口连接）</view>
+</view>
+<view class="content">
+    <view>5、智能设备需要多久充一次电？</view>
+    <view>（1）我们的智能设备充满一次电可以待机5—7天，如果每天溜宠2—3小时可以使用3天左右，而且每次充电时间仅需1～2小时即可充满。</view>
+</view>

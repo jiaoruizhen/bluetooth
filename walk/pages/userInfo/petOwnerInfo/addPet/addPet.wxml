@@ -1,0 +1,52 @@
+<!--pages/userInfo/petOwnerInfo/addPet/addPet.wxml-->
+<form bindsubmit="formSubmit">
+<view class='picture'>
+    <view class='picture-text'><text>头像</text>:</view>
+    <view class="picture-area">
+      <view class='upload' bindtap='chooseImageTap'>十</view>
+      <block wx:for="{{picture}}" wx:for-item="item">
+        <image src='{{item}}' />
+      </block>
+    </view>
+</view>
+<view class='pet name'>
+  <view><text>姓名</text>:</view>
+  <input type='text' name='name'></input>
+</view>
+<view class='pet sex'>
+    <view><text>性别</text>:</view>
+    <radio-group name="sex">
+            <label><radio value="1"/>男</label>
+            <label><radio value="2"/>女</label>
+    </radio-group>
+</view>
+<view class='pet'>
+      <picker name="selector" bindchange="bindPickerChange" value="{{picker_index}}" range="{{picker_arr}}">
+      <view class="picker">
+        <view class="pet_select"><text>请选择</text>:</view>
+        <view class="pet_name">{{picker_arr[picker_index]}}</view>
+      </view>
+    </picker>
+</view>
+<view class='pet'>
+  <picker mode="date" value="{{date}}" start="1978-01-01" end="2100-1-1" bindchange="bindDateChange">  
+      <view class="picker">  
+        <view class="pet_select"><text>出生日期</text>:</view>
+        <text class="pet_name">{{dates}}</text>
+      </view>  
+  </picker>  
+</view> 
+<!-- <view class='picture'>
+    <view class='picture-text'><text>头像</text>:</view>
+    <view class="picture-area">
+      <view class='upload' bindtap='chooseImageTap'>十</view>
+      <block wx:for="{{picture}}" wx:for-item="item">
+        <image src='{{item}}' />
+      </block>
+    </view>
+</view> -->
+<view class='submit'>
+  <button type='primary' form-type='submit'>提交</button>
+</view> 
+</form>
+

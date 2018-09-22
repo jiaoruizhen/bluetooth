@@ -1,0 +1,45 @@
+/* pages/findPet/myPublish/myPublish.wxss */
+/* pages/findPet.wxss */
+
+.nav{
+  margin-left: 70%;
+  font-size: 35rpx;
+  margin-top: 5%;
+}
+view{
+  font-size: 30rpx;
+}
+.user{
+  display: flex;
+  flex-direction: row;
+}
+
+.user image{
+  width:80rpx;
+  height:80rpx;
+}
+.username{
+    padding-top: 5%;
+    padding-left: 2%;
+}
+.loseInfo{
+  padding-left: 10%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+.loseInfo view{
+  padding-top:2%; 
+}
+button{
+height: 28px;
+box-sizing: border-box;
+text-align: center;
+min-width: 15px;
+font-size: 16px;
+line-height: 25px;
+}
+.title{
+  font-size: 17pt;
+  text-align: center;
+  margin-bottom: 10%;
+}

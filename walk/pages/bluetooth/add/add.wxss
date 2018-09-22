@@ -1,0 +1,42 @@
+/* pages/userInfo/petGrowthInfo/add/add.wxss */
+.growth{
+  height: 64rpx;
+  line-height: 64rpx;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}
+.growth view{
+  font-size: 32rpx;
+}
+page{
+   font-size: 36rpx;
+   color: #000000;
+   font-family: PingFangSC-Regular;
+}
+button{
+  width: 95%;
+  margin: 0 auto;
+  height: 64rpx;
+  box-sizing: border-box;
+  text-align: center;
+  min-width: 140rpx;
+  font-size: 32rpx;
+  line-height: 64rpx;
+  margin-top: 5%;
+}
+picker{
+  padding-top: 5%;
+}
+input{
+  box-sizing: border-box;
+  height: 64rpx;
+  line-height: 100%;
+  border: 1rpx gainsboro solid;
+  border-radius: 8rpx;
+  padding: 0 10rpx;
+  font-size: 32rpx;
+  float: right;
+}

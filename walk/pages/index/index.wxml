@@ -1,0 +1,14 @@
+<!--pages/index/index.wxml-->
+  
+  <view class="title" >
+  <view class='question'>
+      <image src='image/question.png' bindtouchstart='question'></image>
+  </view>
+    <image src='image/logo.png' />
+
+    <view class='text'>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n多尼斯宠物计步跟随器是一种保障宠物健康和安全的神器，可以跟踪统计宠物的运动水平、成长记录、走失找寻的功能。</view>
+
+
+    <button open-type='getUserInfo' bindgetuserinfo='getUserInfo'>点击进入主页</button>
+    <view class='bottom'>广东多尼斯网络科技有限公司</view>
+  </view>

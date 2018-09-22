@@ -1,0 +1,16 @@
+/* pages/userInfo/companyInfo/companyInfo.wxss */
+.title{
+   font-size: 50rpx;
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+view{
+  margin-bottom: 5%;
+  font-size: 30rpx;
+}
+.company{
+  width: 95%;
+  margin: 0 auto;
+  line-height: 60rpx;
+  text-align: justify;
+}

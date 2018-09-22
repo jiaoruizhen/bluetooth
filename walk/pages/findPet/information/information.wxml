@@ -1,0 +1,39 @@
+<!--pages/findPet/information/information.wxml-->
+<view class='title'>
+  <image src='../../../images/finded.png' class='findimg'></image>
+  <text>悬赏启示</text>
+</view>
+<block wx:for="{{loseInfo}}" wx:for-item="item">
+  <view class='itemBox'>
+    <!--用户头像和昵称区-->
+    <view class='user'>
+      <image src='{{item.portrait}}'></image>
+      <view class='username'>{{item.nickname}}</view>
+    </view>
+    <!--图片，发布信息区-->
+    <view class="loseInfo">
+      <view>宠物名字： {{item.petName}}</view>
+      <view>宠物类型： {{item.typeName}}</view>
+      <view>性   别: {{item.sex==1?'男':'女'}}</view>
+      <view>宠物描述： {{item.loseInfo.sendData}}</view>
+      <view>丢失时间： {{item.loseInfo.createTime}}</view>
+      <view>丢失地点： {{item.loseInfo.location}}</view>
+      <view>悬赏金额： {{item.loseInfo.bounty}}元</view>
+      <view>丢失设备： {{item.mac}}</view>
+      <block wx:if="{{item.loseInfo.status==0}}">
+        <view>悬赏状态： 悬赏中</view>
+      </block>
+      <block wx:if="{{item.loseInfo.status==1}}">
+        <view style='background-color:green'>悬赏状态： 悬赏成功</view>
+      </block>
+      <view>联 系 人: {{item.username}}</view>
+      <view>联系电话： {{item.loseInfo.mobile}}</view>
+      <view wx:for='{{item.list}}' class="image" wx:for-item="image">
+        <view>
+          <image src='{{image.url}}' bindtap='preview' data-url="{{image.url}}" />
+        </view>
+      </view>
+    </view>
+    <button type='primary' bindtap='getPhone' data-mobile='{{item.loseInfo.mobile}}'>我要领赏</button>
+  </view>
+</block>
